@@ -16,3 +16,12 @@ insert into estado(idEstado,nomeEstado) values(3,"Espirito Santo");
 
 insert into estado(nomeEstado) values("São Paulo");
 insert into estado(nomeEstado) values("Rio de Janeiro");
+
+
+
+create table municipio(
+	idMuninicipio int primary key auto_increment,
+    nomeMunicipio varchar(100),
+    fk_idEstado int,
+    foreign key (fk_idEstado) references estado (idEstado)
+);
